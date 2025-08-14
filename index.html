@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TTD - Test Your Might</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: black;
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+
+		#container {
+			position: relative;
+			width: 920px;
+			height: 480px;
+			margin-left: calc(50% - 460px);
+		}
+
+		img {
+			display: block;
+			position: absolute;
+		}
+
+		#img1, #img2 {
+			display: none;
+		}
+
+		#jarum {
+			display: none;
+			position: relative;
+			top: 316px;
+			left: 460px;
+			width: 0;
+			height: 0;
+			transform: rotateZ(-69deg);
+		}
+
+		#jarum img {
+			top: -178px;
+			left: -8px;
+		}
+
+		.bingkai {
+			width: 100%;
+			bottom: 0;
+		}
+
+		.bingkai.atas {
+			top: 0;
+			bottom: auto;
+			transform: scaleY(-1);
+		}
+
+		#hitam {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background: black;
+			opacity: 0;
+			transition: linear 1s;
+		}
+
+		#hitam.on {
+			opacity: 1;
+		}
+
+		#play {
+			display: block;
+			top: 210px;
+			left: 339px;
+		}
+
+		#escape {
+			display: none;
+			top: 209px;
+			left: 161px;
+		}
+
+		#failed {
+			display: none;
+			top: 210px;
+			left: 288px;
+		}
+
+		#sukses {
+			top: 188px;
+			left: 233px;
+			opacity: 0;
+			transition: linear .3s;
+		}
+
+		#sukses.on {
+			opacity: 1;
+			transition: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<img src="img1.webp" id="img1">
+		<img src="img2.webp" id="img2">
+		<div id="jarum">
+			<img src="jarum.webp">
+		</div>
+		<img src="play.webp" id="play">
+		<img src="escape.webp" id="escape">
+		<img src="failed.webp" id="failed">
+		<div id="hitam"></div>
+		<img src="sukses.webp" id="sukses">
+	</div>
+
+	<img src="bingkai.webp" class="bingkai atas">
+	<img src="bingkai.webp" class="bingkai">
+
+	<script src="script.js"></script>
+</body>
+</html>
